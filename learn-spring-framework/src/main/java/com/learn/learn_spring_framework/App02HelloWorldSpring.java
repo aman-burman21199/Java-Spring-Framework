@@ -15,8 +15,14 @@ public class App02HelloWorldSpring {
 		// name - @Bean
 		
 		// 3. Get Beans managed by Spring
+		// default name of Bean is name of method
 		System.out.println(context.getBean("name"));
 		System.out.println(context.getBean("age"));
+		System.out.println(context.getBean("person"));
+		System.out.println(context.getBean("customBeanName"));
+		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean("person2MethodCall"));
+		System.out.println(context.getBean("person3Parameters"));
 		
 		// Added because of Resource leak warning in line 11
 		context.close();
