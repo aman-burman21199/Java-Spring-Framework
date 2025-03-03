@@ -59,9 +59,11 @@ public class App04GamingSpringBeans {
 		// As we removed GamingConfiguration and made this class as Configuration class
 		var context = new AnnotationConfigApplicationContext(App04GamingSpringBeans.class);
 		
+//		System.out.println(context.getBean(GamingConsole.class));
+//		System.out.println(context.getBean(GameRunner.class));
 		
-		System.out.println(context.getBean(GamingConsole.class));
-		System.out.println(context.getBean(GameRunner.class));
+		context.getBean(GamingConsole.class).up();
+		context.getBean(GameRunner.class).run();
 		
 		context.close();
 	}
