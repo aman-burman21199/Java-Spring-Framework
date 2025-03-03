@@ -1,5 +1,8 @@
 package com.learn.learn_spring_framework.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
 
 	// tightly coupled
